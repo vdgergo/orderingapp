@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS reset--> 
+  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" type="text/css">
+  <!-- Google Font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+  <!-- CSS links-->  
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <div class="header-wrapper">
+      <h1>Jimmy’s Diner</h1>
+      <h2>The best burgers and pizzas in town.</h2>
+      </div>
+  </header>
+  <main>
+    <div class="menu-area" id = "menu-area"></div>
+    <div class="checkout-area hidden" id="checkout-area">
+      <h3>Your order</h3>
+      <div class="item-container" id="item-container"></div>
+      <div class="total-container">
+        <h3>Total price:</h3>
+        <div class="price" id="total-price">$14</div>
+      </div>
+      <button class="coupon-btn" id="coupon-btn">I have a coupon code!</button>
+      <form class="discount-area hidden" id="discount-area">
+        <label for="coupon-code">Enter coupon code:</label>
+        <input type="text" id="coupon-code-el" name="coupon-code" required>
+        <button type="submit">Apply</button>  
+      </form>
+      <button id="accept-btn" class="accept-btn">Complete order</button>
+    </div>
+  </main>
+  <div class="payment-modal hidden" id="payment-modal">
+    <h1>Enter card details</h1>
+    <form id="payment-form" class="payment-form" action="">
+      <input type="text" name="buyer-name" id="buyer-name" placeholder="Enter your name" required>
+      <input type="text" name="buyer-cardnumber" id="buyer-cardnumber" placeholder="Enter your card number" required>
+      <input type="text" name="buyer-cvv" id="buyer-cvv" placeholder="Enter your CVV" required>
+      <button id="pay-btn" class="pay-btn">Pay</button>
+    </form>
+  </div>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
